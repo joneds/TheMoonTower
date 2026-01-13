@@ -125,7 +125,49 @@
 
 <link rel="preconnect" href="https://ssl.google-analytics.com/" crossorigin="">
 
+<!-- Mobile Responsive CSS -->
+<link rel="stylesheet" href="../style/mobile-responsive.css">
 
+<!-- Gallery Mobile Fixes -->
+<style>
+@media screen and (max-width: 959px) {
+    /* Force 2-column mobile layout */
+    .dmPhotoGalleryHolder.gallery4inArow .galleryColumn,
+    .dmPhotoGalleryHolder.gallery5inArow .galleryColumn,
+    ul.galleryColumn[style] {
+        width: 50% !important;
+        max-width: 50% !important;
+        padding: 5px !important;
+        float: left !important;
+        box-sizing: border-box !important;
+    }
+    
+    .dmPhotoGallery .photoGalleryThumbs[style],
+    li.photoGalleryThumbs[style] {
+        width: 100% !important;
+        margin: 0 0 10px 0 !important;
+        padding: 0 !important;
+        min-height: 120px !important;
+    }
+    
+    .dmPhotoGallery .photoGalleryThumbs a[style] {
+        height: 0 !important;
+        padding-bottom: 100% !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    
+    .dmPhotoGallery .photoGalleryThumbs img {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    ul.galleryColumn[style] {
+        width: 100% !important;
+    }
+}
+</style>
 
 <!-- render the required CSS and JS in the head section -->
 <script>
