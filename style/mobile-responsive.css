@@ -187,14 +187,14 @@
 
 /* Tablet specific adjustments */
 @media screen and (min-width: 600px) and (max-width: 959px) {
-    /* Two column layout for tablets */
-    .dmRespRow .dmRespCol {
+    /* Two column layout for tablets - only for multi-column rows */
+    .dmRespRow .dmRespCol:not(.large-12) {
         width: 48% !important;
         float: left !important;
         margin-right: 2% !important;
     }
     
-    .dmRespRow .dmRespCol:nth-child(2n) {
+    .dmRespRow .dmRespCol:not(.large-12):nth-child(2n) {
         margin-right: 0 !important;
     }
     
