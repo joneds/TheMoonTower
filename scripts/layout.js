@@ -26,6 +26,12 @@
     head.appendChild(link);
   });
 
+  // Override WOW.js fade-in animations - force all elements visible immediately
+  // Also reset default body margin to eliminate white border
+  var wowFix = document.createElement('style');
+  wowFix.textContent = '.wow { visibility: visible !important; animation-name: none !important; } body { margin: 0; padding: 0; } .dmDefaultMatrixContentRow { margin-bottom: 15px; }';
+  head.appendChild(wowFix);
+
   // --- Build Header HTML ---
   function getHeaderHTML() {
     return '<div class="dmHeaderContainer fHeader d-header-wrapper">' +
