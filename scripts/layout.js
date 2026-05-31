@@ -170,7 +170,8 @@
 
     // Load jQuery for basic interactions
     loadScripts([
-      base + '/scripts/jquery.min.js'
+      base + '/scripts/jquery.min.js',
+      'https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider.min.js'
     ], function () {
       // Initialize flexslider if present
       if (window.jQuery) {
